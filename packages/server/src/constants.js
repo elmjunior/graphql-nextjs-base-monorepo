@@ -18,6 +18,6 @@ exports.urls = {
 
 
 /* GraphQL Variables */
-exports.GRAPHQL_PORT = process.env.PORT || 3000;
+exports.GRAPHQL_PORT = process.env.PORT || 3001;
 
 exports.MY_SQL_TIMESTAMP_FORMAT = 'YYYY-MM-DD HH:mm:ss';

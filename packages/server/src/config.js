@@ -5,7 +5,7 @@ const config = {
   commons: {
     env: process.env.NODE_ENV || 'development',
     root: path.join(__dirname, '..'),
-    port: process.env.PORT || 3000,
+    port: process.env.PORT || 3001,
 
     jwtSecret: 'app@graphql',
     PLAYGROUND: process.env.PLAYGROUND,
