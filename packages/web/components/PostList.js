@@ -38,12 +38,11 @@ export default function PostList() {
     <div>
       {listUsers.map((user, index) => (
         // eslint-disable-next-line react/no-array-index-key
-        <li key={index}>
-          <div>
-            {user.name}
+        <div key={index}>
+          {user.name}
 
-          </div>
-        </li>
+        </div>
+
       ))}
     </div>
   );
