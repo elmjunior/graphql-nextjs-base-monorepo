@@ -1,7 +1,7 @@
 
 import React from 'react';
 import App from '../components/App';
-import PostList from '../components/PostList';
+import UsersList from '../components/UsersList';
 // eslint-disable-next-line import/named
 import { withApollo } from '../lib/apollo';
 
@@ -10,7 +10,7 @@ function IndexPage() {
   return (
     <App>
 
-      <PostList />
+      <UsersList />
     </App>
   );
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useQuery } from '@apollo/react-hooks';
-
+import Link from 'next/link';
 import gql from 'graphql-tag';
 
 
@@ -8,14 +8,14 @@ export const ALL_USERS_QUERY = gql`
   query listUsers {
     listUsers {
       name
-     
+      slug
     }
     
   }
 `;
 
 
-export default function PostList() {
+export default function UsersList() {
   const {
     loading, data,
   } = useQuery(
@@ -36,12 +36,19 @@ export default function PostList() {
 
   return (
     <div>
-      {listUsers.map((user, index) => (
-        // eslint-disable-next-line react/no-array-index-key
-        <div key={index}>
-          {user.name}
+      {listUsers.map((user) => (
+        <Link href={`users/${user.slug}`} key={user.slug}>
+          <div>
+            Name:
+            {' '}
+            {user.name}
+            <br />
+            slug:
+            {' '}
+            {user.slug}
+          </div>
 
-        </div>
+        </Link>
 
       ))}
     </div>
