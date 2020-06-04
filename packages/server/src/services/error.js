@@ -6,10 +6,8 @@ exports.customError = ({
   data: {
     response: { key, detail },
   },
-}) => {
-  return new GraphQLError({
-    message: key || 'Error',
-    detail: detail || 'Detail undefined from server',
-    code: 400,
-  });
-};
+}) => new GraphQLError({
+  message: key || 'Error',
+  detail: detail || 'Detail undefined from server',
+  code: 400,
+});

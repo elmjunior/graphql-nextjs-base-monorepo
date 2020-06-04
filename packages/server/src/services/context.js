@@ -3,7 +3,7 @@ const getContext = ({ req }) => {
 
   if (!isAuthenticate) {
     return {
-      authToken: req.user && req.user.authToken || undefined,
+      authToken: (req.user && req.user.authToken) || undefined,
       timeZone: req.headers.timezone,
     };
   }

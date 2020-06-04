@@ -31,10 +31,23 @@ function decorator(obj) {
     o,
     args = {},
     {
-      accessId, accountLocalId, authToken, timeZone, url, email, loggedUser,
+      accessId,
+      accountLocalId,
+      authToken,
+      timeZone,
+      url,
+      email,
+      loggedUser,
     } = {},
   ) => fn({
-    email, ...args, accessId, accountLocalId, authToken, timeZone, url, loggedUser,
+    email,
+    ...args,
+    accessId,
+    accountLocalId,
+    authToken,
+    timeZone,
+    url,
+    loggedUser,
   });
 
   Object.keys(obj).forEach((key) => {
